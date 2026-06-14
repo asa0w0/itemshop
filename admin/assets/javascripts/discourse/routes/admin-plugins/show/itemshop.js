@@ -5,7 +5,7 @@ import EmberObject from "@ember/object";
 export default class DiscourseItemshopRoute extends DiscourseRoute {
   model() {
     if (!this.currentUser?.admin) {
-      return { rewards: [], redemptions: [] };
+      return EmberObject.create({ rewards: [], redemptions: [] });
     }
 
     return Promise.all([
