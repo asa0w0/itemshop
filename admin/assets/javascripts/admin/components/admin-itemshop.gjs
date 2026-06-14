@@ -44,6 +44,11 @@ export default class AdminItemshop extends Component {
   @tracked processingRedemption = {};
 
   @action
+  updateField(field, event) {
+    this[field] = event.target.value;
+  }
+
+  @action
   setTab(tab) {
     this.activeTab = tab;
   }
@@ -216,19 +221,19 @@ export default class AdminItemshop extends Component {
             <form {{on "submit" this.saveReward}} class="admin-reward-form form-vertical">
               <div class="control-group">
                 <label>Item-Name</label>
-                <input type="text" class="input-large" required {{on "input" (action (mut this.name) value="target.value")}} value={{this.name}} />
+                <input type="text" class="input-large" required {{on "input" (fn this.updateField "name")}} value={{this.name}} />
               </div>
               <div class="control-group">
                 <label>Beschreibung</label>
-                <textarea class="input-large" {{on "input" (action (mut this.description) value="target.value")}}>{{this.description}}</textarea>
+                <textarea class="input-large" {{on "input" (fn this.updateField "description")}}>{{this.description}}</textarea>
               </div>
               <div class="control-group">
                 <label>Punkte-Kosten</label>
-                <input type="number" min="0" required class="input-small" {{on "input" (action (mut this.cost) value="target.value")}} value={{this.cost}} />
+                <input type="number" min="0" required class="input-small" {{on "input" (fn this.updateField "cost")}} value={{this.cost}} />
               </div>
               <div class="control-group">
                 <label>Typ</label>
-                <select class="input-medium" {{on "change" (action (mut this.rewardType) value="target.value")}}>
+                <select class="input-medium" {{on "change" (fn this.updateField "rewardType")}}>
                   <option value="manual" selected={{eq this.rewardType "manual"}}>Manuell (Lieferung)</option>
                   <option value="title" selected={{eq this.rewardType "title"}}>Benutzertitel</option>
                   <option value="group" selected={{eq this.rewardType "group"}}>Gruppe beitreten</option>
@@ -237,11 +242,11 @@ export default class AdminItemshop extends Component {
               </div>
               <div class="control-group">
                 <label>Kategorie</label>
-                <input type="text" class="input-medium" required {{on "input" (action (mut this.category) value="target.value")}} value={{this.category}} />
+                <input type="text" class="input-medium" required {{on "input" (fn this.updateField "category")}} value={{this.category}} />
               </div>
               <div class="control-group">
                 <label>Seltenheit</label>
-                <select class="input-medium" {{on "change" (action (mut this.rarity) value="target.value")}}>
+                <select class="input-medium" {{on "change" (fn this.updateField "rarity")}}>
                   <option value="common" selected={{eq this.rarity "common"}}>Gewöhnlich (Common)</option>
                   <option value="rare" selected={{eq this.rarity "rare"}}>Selten (Rare)</option>
                   <option value="exotic" selected={{eq this.rarity "exotic"}}>Exotisch (Exotic)</option>
@@ -250,11 +255,11 @@ export default class AdminItemshop extends Component {
               </div>
               <div class="control-group">
                 <label>Wert (z. B. Titeltext, Gruppen-ID, Rahmen-URL)</label>
-                <input type="text" class="input-large" {{on "input" (action (mut this.rewardValue) value="target.value")}} value={{this.rewardValue}} />
+                <input type="text" class="input-large" {{on "input" (fn this.updateField "rewardValue")}} value={{this.rewardValue}} />
               </div>
               <div class="control-group">
                 <label>FontAwesome-Icon (z.B. gift, crown, shield-halved)</label>
-                <input type="text" class="input-medium" {{on "input" (action (mut this.iconName) value="target.value")}} value={{this.iconName}} />
+                <input type="text" class="input-medium" {{on "input" (fn this.updateField "iconName")}} value={{this.iconName}} />
               </div>
 
               <div class="form-actions">
