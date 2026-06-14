@@ -1,0 +1,12 @@
+en:
+  site_settings:
+    discourse_itemshop_enabled: "Enable the dedicated Itemshop plugin"
+  itemshop:
+    inventory:
+      showcase_limit_reached: "You can only showcase up to %{limit} items."
+    shop:
+      insufficient_points: "You don't have enough points."
+      redeemed_item: "Redeemed: %{name}"
+      refund_item: "Refunded: %{name}"
+      recipient_not_found: "Recipient user not found."
+      gifted_item: "Gifted: %{name} to @%{recipient}"

@@ -1,0 +1,43 @@
+en:
+  admin_js:
+    admin:
+      site_settings:
+        categories:
+          discourse_itemshop: "Discourse Itemshop"
+  js:
+    itemshop:
+      title: "Itemshop"
+      save: "Save"
+      cancel: "Cancel"
+      close: "Close"
+      new_item: "New Item"
+      confirm_destroy: "Are you sure you want to delete this item?"
+      inventory:
+        title: "My Items"
+        equipped: "Equipped"
+        equip: "Equip"
+        unequip: "Unequip"
+        owned: "Owned"
+        empty_inventory: "You don't own any items yet."
+        showcase_limit_reached: "You can only showcase up to %{limit} items."
+      shop:
+        title: "Itemshop"
+        redeem: "Buy"
+        gift: "Gift"
+        insufficient_points: "You don't have enough points."
+        redeem_confirm: "Are you sure you want to buy %{name} for %{cost} points?"
+        history: "Purchase History"
+        status_pending: "Pending"
+        status_delivered: "Delivered"
+        status_rejected: "Rejected"
+        balance: "Balance: %{balance} points"
+        redeemed_item: "Redeemed: %{name}"
+        refund_item: "Refunded: %{name}"
+        gift_modal_title: "Gift %{name}"
+        gift_modal_username_label: "Recipient Username"
+        gift_modal_submit: "Send Gift"
+        gift_send_success: "Successfully gifted %{name} to @%{recipient}!"
+        rarity_common: "Common"
+        rarity_rare: "Rare"
+        rarity_exotic: "Exotic"
+        rarity_legendary: "Legendary"

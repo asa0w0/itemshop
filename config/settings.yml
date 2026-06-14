@@ -1,0 +1,4 @@
+plugins:
+  discourse_itemshop_enabled:
+    default: true
+    client: true
