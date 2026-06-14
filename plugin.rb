@@ -1,4 +1,4 @@
-# name: discourse-itemshop
+# name: itemshop
 # about: Dedicated itemshop plugin for Discourse using Gamification score
 # version: 0.1.0
 # authors: Antigravity
@@ -10,7 +10,7 @@ enabled_site_setting :discourse_itemshop_enabled
 register_asset "stylesheets/common/itemshop.scss"
 
 module ::DiscourseItemshop
-  PLUGIN_NAME = "discourse-itemshop"
+  PLUGIN_NAME = "itemshop"
 end
 
 require_relative "lib/discourse_itemshop/engine"
@@ -22,7 +22,7 @@ after_initialize do
 
   add_admin_route(
     "itemshop.admin.title",
-    "discourse-itemshop",
+    "itemshop",
     { use_new_show_route: true }
   )
   # Rails autoloading will load classes from app/

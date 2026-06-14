@@ -5,7 +5,7 @@ export default {
 
   map() {
     this.route(
-      "discourse-itemshop",
+      "itemshop",
       { path: "itemshop" }
     );
   },

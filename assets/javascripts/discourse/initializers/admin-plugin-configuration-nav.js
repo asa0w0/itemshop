@@ -1,7 +1,7 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 
 export default {
-  name: "discourse-itemshop-admin-plugin-configuration-nav",
+  name: "itemshop-admin-plugin-configuration-nav",
 
   initialize(container) {
     const currentUser = container.lookup("service:current-user");
@@ -10,10 +10,10 @@ export default {
     }
 
     withPluginApi("1.1.0", (api) => {
-      api.addAdminPluginConfigurationNav("discourse-itemshop", [
+      api.addAdminPluginConfigurationNav("itemshop", [
         {
           label: "itemshop.admin.title",
-          route: "adminPlugins.show.discourse-itemshop",
+          route: "adminPlugins.show.itemshop",
         },
       ]);
     });

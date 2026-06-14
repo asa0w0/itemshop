@@ -268,7 +268,7 @@ export default class ItemshopShop extends Component {
               <span class="balance-text">Guthaben: <strong>{{fullnumber this.balance}} Münzen</strong></span>
             </div>
             {{#if this.isStaff}}
-              <a href="/admin/plugins/discourse-itemshop" class="btn btn-default admin-quick-link" target="_blank">
+              <a href="/admin/plugins/itemshop" class="btn btn-default admin-quick-link" target="_blank">
                 {{icon "wrench"}} Itemshop verwalten
               </a>
             {{/if}}
