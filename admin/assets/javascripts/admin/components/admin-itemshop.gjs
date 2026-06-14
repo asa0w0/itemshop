@@ -40,6 +40,7 @@ export default class AdminItemshop extends Component {
   @tracked category = "Sonstiges";
   @tracked rarity = "common";
 
+  @tracked activeTab = "items";
   @tracked saving = false;
   @tracked processingRedemption = {};
 
