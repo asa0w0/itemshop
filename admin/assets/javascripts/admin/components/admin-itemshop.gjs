@@ -13,11 +13,22 @@ import { i18n } from "discourse-i18n";
 const isProcessing = (processing, redId) => processing[redId];
 
 export default class AdminItemshop extends Component {
-  @tracked activeTab = "items"; // "items" or "redemptions"
-  @tracked rewards = this.args.model.rewards;
-  @tracked redemptions = this.args.model.redemptions;
+  @tracked mutableRewards = [];
+  @tracked mutableRedemptions = [];
 
-  // Form states
+  get rewards() {
+    return this.mutableRewards;
+  }
+
+  get redemptions() {
+    return this.mutableRedemptions;
+  }
+
+  constructor() {
+    super(...arguments);
+    this.mutableRewards = this.args.model?.rewards ?? [];
+    this.mutableRedemptions = this.args.model?.redemptions ?? [];
+  }
   @tracked editingReward = null;
   @tracked isCreating = false;
   @tracked name = "";
