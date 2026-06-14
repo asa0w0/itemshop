@@ -7,6 +7,8 @@ en:
   js:
     itemshop:
       title: "Itemshop"
+      admin:
+        title: "Itemshop"
       save: "Save"
       cancel: "Cancel"
       close: "Close"

@@ -11,5 +11,8 @@ DiscourseItemshop::Engine.routes.draw do
     post "/rewards" => "admin_rewards#create_reward"
     put "/rewards/:id" => "admin_rewards#update_reward"
     delete "/rewards/:id" => "admin_rewards#delete_reward"
+    get "/redemptions" => "admin_rewards#redemptions"
+    post "/redemptions/:id/approve" => "admin_rewards#approve_redemption"
+    post "/redemptions/:id/reject" => "admin_rewards#reject_redemption"
   end
 end

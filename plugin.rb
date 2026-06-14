@@ -7,6 +7,8 @@
 
 enabled_site_setting :discourse_itemshop_enabled
 
+register_asset "stylesheets/common/itemshop.scss"
+
 module ::DiscourseItemshop
   PLUGIN_NAME = "discourse-itemshop"
 end
@@ -17,6 +19,12 @@ after_initialize do
   Discourse::Application.routes.append do
     mount ::DiscourseItemshop::Engine, at: "/"
   end
+
+  add_admin_route(
+    "itemshop.admin.title",
+    "discourse-itemshop",
+    { use_new_show_route: true }
+  )
   # Rails autoloading will load classes from app/
   
   # Register showcased items on UserCard and User serializers
